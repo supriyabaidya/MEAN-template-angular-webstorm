@@ -14,7 +14,7 @@ import {RestApiService} from './rest-api.service';
 })
 export class AppComponent {
   title = 'app';
-  url = 'http://localhost:3030/test';
+  url = 'http://nodejs-test-nodejs-mongodb-test.a3c1.starter-us-west-1.openshiftapps.com/test';
   message: string;
 
   constructor(private http: Http, private restApi: RestApiService) {
