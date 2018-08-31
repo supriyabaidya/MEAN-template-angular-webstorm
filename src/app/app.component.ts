@@ -7,6 +7,8 @@ import 'rxjs-compat/add/operator/catch';
 
 import {RestApiService} from './rest-api.service';
 
+import {config} from './app.node-server.config';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,7 +16,9 @@ import {RestApiService} from './rest-api.service';
 })
 export class AppComponent {
   title = 'app';
-  url = 'http://nodejs-test-nodejs-mongodb-test.a3c1.starter-us-west-1.openshiftapps.com/test';
+
+  url = config.serverHost + ':' + config.serverPort + '/test';
+
   message: string;
 
   constructor(private http: Http, private restApi: RestApiService) {
