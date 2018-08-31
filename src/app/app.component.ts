@@ -24,7 +24,7 @@ export class AppComponent {
   constructor(private http: Http, private restApi: RestApiService) {
   }
 
-  async serverTest() {
+  serverTest() {
     this.http.get(this.url)
       .map((response: Response) => response.json())
       .catch((err: Response) => {
